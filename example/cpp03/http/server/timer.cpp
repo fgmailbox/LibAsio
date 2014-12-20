@@ -17,7 +17,7 @@
 namespace http {
 namespace server {
 
-timer::timer(io_service_ptr& io_service,
+timer::timer(io_service_ptr io_service,
 			 facade& facade)
   : timer_(new boost::asio::deadline_timer(*io_service)),
     strand_(*io_service),

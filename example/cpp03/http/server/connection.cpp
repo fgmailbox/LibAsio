@@ -26,8 +26,8 @@ boost::atomic<unsigned long long>		connection::s_system_total_read_bytes_(0);
 
 boost::atomic<unsigned long long>		connection::s_system_total_write_bytes_(0);
 
-connection::connection(io_service_ptr& io_service,
-					   io_service_ptr& io_service_work,
+connection::connection(io_service_ptr io_service,
+					   io_service_ptr io_service_work,
 					   facade& facade,ConnectionType connType)
   : strand_(*io_service),
 	resolver(*io_service_work),

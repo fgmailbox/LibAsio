@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)/example/cpp03/http/server;$(SolutionDir)/UI;$(SolutionDir)/UI/ListCtrlEx;$(SolutionDir)/UI/Layout;$(SolutionDir)/UI/CGridListCtrlEx;$(SolutionDir)/utils;$(SolutionDir)/应用层;$(SolutionDir)/应用层/include;$(SolutionDir)/应用层/src;$(SolutionDir)/include;$(SolutionDir)/include/xml;$(ProjectDir)/;$(SolutionDir)\..\..\util_lib\Boost\include\boost-1_56;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <StructMemberAlignment>1Byte</StructMemberAlignment>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(SolutionDir)\lib\x86;$(SolutionDir)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+</Project>

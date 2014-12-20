@@ -67,7 +67,7 @@ public:
 
 
   /// Construct a connection with the given io_service.
-  explicit timer(io_service_ptr& io_service,
+  explicit timer(io_service_ptr io_service,
 				 facade& facade);
 
   ~timer();

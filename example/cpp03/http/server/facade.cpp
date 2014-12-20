@@ -12,7 +12,7 @@
 #include <signal.h>
 #include "Singleton2.h"
 #include "facade.hpp"
-
+#include <boost/move/move.hpp>
 namespace http {
 namespace server {
 
@@ -175,8 +175,8 @@ void facade_extension::stop_all()
 connection_ptr facade_extension::alloc_connection(connection::ConnectionType connType,int iosPoolType)
 {
 	int ios_size = io_service_pools.size();
-	connection_ptr tmp_connection =  boost::make_shared<connection>(boost::ref(io_service_pools[iosPoolType % ios_size]->get_io_service()),
-																	boost::ref(io_service_pools[iosPoolType % ios_size]->get_io_service()),
+	connection_ptr tmp_connection =  boost::make_shared<connection>(boost::move(io_service_pools[iosPoolType % ios_size]->get_io_service()),
+																	boost::move(io_service_pools[iosPoolType % ios_size]->get_io_service()),
 																	boost::ref(*this),connType);
 
 	if(!tmp_connection )
@@ -190,7 +190,7 @@ timer_ptr facade_extension::alloc_timer(int iosPoolType)
 	int ios_size = io_service_pools.size();
 
 	timer_ptr tmp_timer = boost::make_shared<timer>(
-														boost::ref(io_service_pools[iosPoolType % ios_size]->get_io_service()),
+														boost::move(io_service_pools[iosPoolType % ios_size]->get_io_service()),
 														boost::ref(*this)
 													);
 #ifdef _DEBUG

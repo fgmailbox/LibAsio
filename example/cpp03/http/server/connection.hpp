@@ -106,8 +106,8 @@ public:
 
 	ConnectionType type;
   /// Construct a connection with the given io_service.
-  explicit connection(io_service_ptr& io_service,
-					  io_service_ptr& io_service_work,
+  explicit connection(io_service_ptr io_service,
+					  io_service_ptr io_service_work,
 					  facade& facade, ConnectionType connType = E_CLIENT_HANDLE);
 
   ~connection();
