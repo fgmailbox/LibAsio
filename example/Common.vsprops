@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="gb2312"?>
+<VisualStudioPropertySheet
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="Common"
+	>
+	<Tool
+		Name="VCCLCompilerTool"
+		AdditionalIncludeDirectories="&quot;$(SolutionDir)/example/cpp03/http/server&quot;;&quot;$(SolutionDir)/UI&quot;;&quot;$(SolutionDir)/UI/ListCtrlEx&quot;;&quot;$(SolutionDir)/UI/Layout&quot;;&quot;$(SolutionDir)/UI/CGridListCtrlEx&quot;;&quot;$(SolutionDir)/utils&quot;;&quot;$(SolutionDir)/应用层&quot;;&quot;$(SolutionDir)/应用层/include&quot;;&quot;$(SolutionDir)/应用层/src&quot;;&quot;$(SolutionDir)/include&quot;;&quot;$(SolutionDir)/include/xml&quot;;&quot;$(ProjectDir)/&quot;;&quot;$(SolutionDir)\..\..\util_lib\Boost\include\boost-1_56&quot;"
+		StructMemberAlignment="1"
+		EnableFunctionLevelLinking="true"
+	/>
+	<Tool
+		Name="VCLinkerTool"
+		AdditionalLibraryDirectories="&quot;$(SolutionDir)\lib\x86&quot;;&quot;$(SolutionDir)\lib&quot;"
+	/>
+</VisualStudioPropertySheet>
